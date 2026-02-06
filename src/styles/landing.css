@@ -1,0 +1,101 @@
+.landing {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+
+  font-family: 'Dancing Script', cursive;
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 235, 0.88),
+    rgba(255, 230, 215, 0.92)
+  );
+}
+
+.landing-content {
+  position: relative;
+  z-index: 3;
+
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.landing-content h1 {
+  font-size: 2.8rem;
+  color: #b71c1c;
+  margin-bottom: 14px;
+}
+
+.landing-content p {
+  font-size: 1.25rem;
+  color: #6d2c2c;
+  margin-bottom: 34px;
+}
+
+.heart-btn {
+  padding: 15px 38px;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #e53935, #ff5252);
+  color: #fffaf5;
+
+  box-shadow: 0 14px 30px rgba(229, 57, 53, 0.45);
+  transition: box-shadow 0.3s ease;
+}
+
+.heart-btn:hover {
+  box-shadow: 0 22px 45px rgba(229, 57, 53, 0.65);
+}
+
+.floating-heart {
+  position: absolute;
+  z-index: 2;
+  width: 110px;
+  opacity: 0.85;
+}
+
+.heart-1 {
+  top: 18%;
+  left: 12%;
+  transform: rotate(-10deg);
+}
+
+.heart-2 {
+  bottom: 18%;
+  right: 15%;
+  transform: rotate(8deg);
+}
+
+@media (max-width: 600px) {
+  .landing-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .landing-content p {
+    font-size: 1.1rem;
+  }
+
+  .floating-heart {
+    width: 70px;
+  }
+}

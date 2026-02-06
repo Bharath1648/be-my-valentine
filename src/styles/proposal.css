@@ -1,0 +1,124 @@
+.proposal {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    120deg,
+    #b11226,
+    #e63946,
+    #ff758f,
+    #e63946
+  );
+  background-size: 300% 300%;
+  animation: romanticGradient 18s ease infinite;
+}
+
+@keyframes romanticGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 55%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
+.proposal-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.proposal-image {
+  width: 260px;
+  max-width: 80%;
+  margin-bottom: 28px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.35),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.proposal-content h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #fff1e6;
+  margin-bottom: 40px;
+}
+
+.proposal-buttons {
+  display: flex;
+  gap: 36px;
+}
+
+.proposal-buttons button {
+  padding: 16px 40px;
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.yes-btn {
+  background: linear-gradient(135deg, #e63946, #ff758f);
+  color: #fff1e6;
+  box-shadow: 0 10px 25px rgba(230, 57, 70, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.yes-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(230, 57, 70, 0.65);
+}
+
+.no-btn {
+  background: #f1f1f1;
+  color: #444;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .proposal-image {
+    width: 200px;
+    margin-bottom: 22px;
+  }
+
+  .proposal-content h1 {
+    font-size: 2rem;
+  }
+
+  .proposal-buttons {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .proposal-buttons button {
+    width: 100%;
+  }
+}
