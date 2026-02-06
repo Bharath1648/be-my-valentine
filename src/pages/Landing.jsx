@@ -51,7 +51,7 @@ export default function Landing({ setPage }) {
           whileHover={{ scale: 1.12 }}
           whileTap={{ scale: 0.95 }}
           className="heart-btn"
-          onClick={setPage}
+          onClick={() => setPage("proposal")}
         >
           Open My Heart 💌
         </motion.button>
